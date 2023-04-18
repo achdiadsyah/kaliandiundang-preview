@@ -5,16 +5,28 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		redirect('https://kaliandiundang.com', 'refresh');
+		if(ENVIRONMENT == 'development'){
+			$url = 'http://127.0.0.1:8000';
+		} elseif(ENVIRONMENT == 'production') {
+			$url = 'https://kaliandiundang.com';
+		}
+		redirect($url, 'refresh');
 	}
 
 	public function getUndangan()
 	{
+
+		if(ENVIRONMENT == 'development'){
+			$url = 'http://127.0.0.1:8000';
+		} elseif(ENVIRONMENT == 'production') {
+			$url = 'https://kaliandiundang.com';
+		}
+
 		$slug = $this->uri->segment(1);
         if($slug){
 			$curl = curl_init();
 			curl_setopt_array($curl, array(
-				CURLOPT_URL => 'http://127.0.0.1:8000/api/wedding-data/?slug='.$slug,
+				CURLOPT_URL => $url.'/api/wedding-data/?slug='.$slug,
 				CURLOPT_RETURNTRANSFER => true,
 				CURLOPT_ENCODING => '',
 				CURLOPT_MAXREDIRS => 10,
@@ -32,7 +44,7 @@ class Home extends CI_Controller {
 			$resApi = json_decode($response, true);
 
 			if($resApi['error'] == true){
-				redirect('https://kaliandiundang.com', 'refresh');
+				redirect($url, 'refresh');
 			} else {
 				$data = [
 					'response'	=> $resApi,
