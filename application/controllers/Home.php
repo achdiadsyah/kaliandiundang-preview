@@ -14,7 +14,7 @@ class Home extends CI_Controller {
         if($slug){
 			$curl = curl_init();
 			curl_setopt_array($curl, array(
-				CURLOPT_URL => 'https://kaliandiundang.com/api/wedding-data/?slug='.$slug,
+				CURLOPT_URL => 'http://127.0.0.1:8000/api/wedding-data/?slug='.$slug,
 				CURLOPT_RETURNTRANSFER => true,
 				CURLOPT_ENCODING => '',
 				CURLOPT_MAXREDIRS => 10,
@@ -29,14 +29,18 @@ class Home extends CI_Controller {
 
 			$response = curl_exec($curl);
 			curl_close($curl);
-			$resApi = json_decode($response);
+			$resApi = json_decode($response, true);
 
-			$data = [
-				'response'	=> $resApi,
-				'to'		=> $this->input->get('to')	
-			];
+			if($resApi['error'] == true){
+				redirect('https://kaliandiundang.com', 'refresh');
+			} else {
+				$data = [
+					'response'	=> $resApi,
+					'to'		=> $this->input->get('to')	
+				];
+				$this->load->view($resApi['template'], $data);
+			}
 
-            $this->load->view($resApi->template, $data);
         }
 	}
 
