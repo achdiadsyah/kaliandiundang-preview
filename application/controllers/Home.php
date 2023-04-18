@@ -14,7 +14,7 @@ class Home extends CI_Controller {
         if($slug){
 			$curl = curl_init();
 			curl_setopt_array($curl, array(
-				CURLOPT_URL => 'http://127.0.0.1:8000/api/wedding-data/?slug='.$slug,
+				CURLOPT_URL => 'https://kaliandiundang.com/api/wedding-data/?slug='.$slug,
 				CURLOPT_RETURNTRANSFER => true,
 				CURLOPT_ENCODING => '',
 				CURLOPT_MAXREDIRS => 10,
