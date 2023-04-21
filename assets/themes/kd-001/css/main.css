@@ -1,0 +1,260 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+:root {
+  --primary: #eead22;
+  --secodary: #fff3d7;
+  --hover: #b17902;
+  --dark: #000000;
+  --light: #ffffff
+}
+
+.modal.modal-fullscreen .modal-dialog {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  max-width: 100%; 
+}
+
+.modal.modal-fullscreen .modal-content {
+  height: auto;
+  height: 100vh;
+  border-radius: 0;
+  border: none; 
+}
+
+.modal.modal-fullscreen .modal-body {
+  overflow-X: auto;
+}
+
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+}
+
+#timer {
+  font-size: 3em;
+  font-weight: 100;
+  color: var(--light);
+  padding: 20px;
+  color: var(--light);
+
+}
+
+#timer div {
+  display: inline-block;
+  max-width: 480px;
+  padding: 8px;
+  background: var(--primary);
+  opacity: 90%;
+  border-radius: 5px;
+  margin: 8px;
+}
+
+#timer div span {
+  color: var(--light);
+  display: block;
+  margin-top: 15px;
+  font-size: .35em;
+  font-weight: 400;
+}
+
+.timer-heading {
+  text-shadow: #fff3d7;
+}
+
+.bg-kd {
+  background-color: var(--primary);
+}
+
+.fc-kd {
+  color: var(--primary);
+}
+
+.jumbotron{
+  height: 100vh;
+}
+
+#header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#intro_couple {
+  background-color: var(--secodary);
+}
+
+#galeri_video {
+  background-color: var(--secodary);
+}
+
+#wallet {
+  background-color: var(--secodary);
+}
+
+#ucapan_doa {
+  background-color: var(--secodary);
+}
+
+#protokol_covid {
+  background-repeat: no-repeat;
+  background-position: right-top;
+  background-size: 300px;
+}
+
+.kd-primary-text-dark {
+  font-family: 'Great Vibes';
+  font-size: 32pt;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.kd-primary-text-light {
+  font-family: 'Great Vibes';
+  font-size: 32pt;
+  font-weight: 600;
+  color: var(--light);
+}
+
+.kd-primary-text-color {
+  font-family: 'Delicious Handrawn';
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.kd-secondary-text-dark {
+  font-family: 'Delicious Handrawn';
+  font-size: 22pt;
+  font-weight: 200;
+  color: var(--dark);
+}
+
+.kd-secondary-text-light {
+  font-family: 'Delicious Handrawn';
+  font-size: 22pt;
+  font-weight: 200;
+  color: var(--light);
+}
+
+.kd-secondary-text-color {
+  font-family: 'Delicious Handrawn';
+  font-weight: 200;
+  color: var(--primary);
+}
+
+.kd-primary-arabic-dark {
+  font-family: 'Droid Arabic Kufi', serif;
+  font-size: 22pt;
+  font-weight: 200;
+  color: var(--dark);
+}
+
+.kd-primary-arabic-light {
+  font-family: 'Droid Arabic Kufi', serif;
+  font-size: 22pt;
+  font-weight: 200;
+  color: var(--light);
+}
+
+.player-btn {
+  position: fixed;
+  visibility: visible;
+  opacity: 0;
+  right: 15px;
+  bottom: 60px;
+  z-index: 997;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.player-btn i {
+  font-size: 24px;
+  color: var(--light);
+  line-height: 0;
+  animation: rotation 5s infinite linear;
+}
+
+.player-btn:hover {
+  background: var(--hover);;
+  color: var(--light);;
+}
+
+.player-btn.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(60px);
+	}
+}
+
+svg #wheel {
+	animation: scroll ease 2s infinite;
+}
+
+.navmobile {
+	width: 100%;
+  max-width: 480px;
+	background: var(--primary);
+  opacity: 85%;
+	z-index: 999;
+	left: 50%;
+  transform: translate(-50%, 0);
+	bottom: 0px;
+	position: fixed;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.navmobile ul {
+	padding: 0;
+	margin: 0 auto;
+	width: 480px;
+	max-width: 100%;
+}
+
+.navmobile ul li {
+	float: left;
+	width: 16% !important;
+	color: var(--light);
+	text-align: center;
+	list-style: none;
+	font-size: 25px;
+	line-height: 2em;
+}
+
+.navmobile ul li span {
+	font-size: 14px;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+.navmobile ul li a {
+	color: var(--light);
+	display: inline-block;
+	width: 100%;
+	text-decoration: none;
+}
+
+@media (max-width:576px) {
+	.navmobile ul li span {
+		display: none;
+	}
+}

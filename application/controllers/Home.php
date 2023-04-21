@@ -46,11 +46,24 @@ class Home extends CI_Controller {
 			if($resApi['error'] == true){
 				redirect($url, 'refresh');
 			} else {
-				$data = [
-					'response'	=> $resApi,
-					'to'		=> $this->input->get('to')	
-				];
-				$this->load->view($resApi['template'], $data);
+				if($resApi['user_config']['published_status'] == 'draft'){
+					//check token
+					$data = [
+						'response'	=> $resApi,
+						'to'		=> $this->input->get('to'),
+						'url'		=> $url,	
+					];
+					$this->load->view($resApi['template'], $data);
+				}elseif($resApi['user_config']['published_status'] == 'publish'){
+					$data = [
+						'response'	=> $resApi,
+						'to'		=> $this->input->get('to'),
+						'url'		=> $url,	
+					];
+					$this->load->view($resApi['template'], $data);
+				} else {
+					redirect($url, 'refresh');
+				}
 			}
 
         }
