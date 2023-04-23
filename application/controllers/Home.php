@@ -58,13 +58,14 @@ class Home extends CI_Controller {
 				if($resApi['user_config']['published_status'] == 'publish'){
 
 					$template = $resApi['template'];
-
+					$this->load->view($template, $data);
 				} elseif($resApi['user_config']['published_status'] == 'draft'){
 					
 					$template = $this->input->get('template');
+					$this->load->view($template, $data);
+				} else {
+					redirect($url, 'refresh');
 				}
-				// var_dump($template);
-				$this->load->view($template, $data);
 			}
         }
 	}
