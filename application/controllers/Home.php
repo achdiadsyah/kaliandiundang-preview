@@ -22,6 +22,8 @@ class Home extends CI_Controller {
 			$url = 'https://kaliandiundang.com';
 		}
 
+		$aws_url = 'https://is3.cloudhost.id/kaliandiundang-prod/';
+
 		$slug = $this->uri->segment(1);
         if($slug){
 			$curl = curl_init();
@@ -46,28 +48,24 @@ class Home extends CI_Controller {
 			if($resApi['error'] == true){
 				redirect($url, 'refresh');
 			} else {
-				if($resApi['user_config']['published_status'] == 'draft'){
-					//check token
-					$data = [
-						'response'	=> $resApi,
-						'to'		=> $this->input->get('to'),
-						'url'		=> $url,	
-					];
-					$this->load->view($resApi['template'], $data);
-				}elseif($resApi['user_config']['published_status'] == 'publish'){
-					$data = [
-						'response'	=> $resApi,
-						'to'		=> $this->input->get('to'),
-						'url'		=> $url,	
-					];
-					$this->load->view($resApi['template'], $data);
-				} else {
-					redirect($url, 'refresh');
-				}
-			}
+				$data = [
+					'response'	=> $resApi,
+					'to'		=> $this->input->get('to'),
+					'url'		=> $url,
+					'aws_url'	=> $aws_url,
+				];
 
+				if($resApi['user_config']['published_status'] == 'publish'){
+
+					$template = $resApi['template'];
+
+				} elseif($resApi['user_config']['published_status'] == 'draft'){
+					
+					$template = $this->input->get('template');
+				}
+				// var_dump($template);
+				$this->load->view($template, $data);
+			}
         }
 	}
-
-
 }
