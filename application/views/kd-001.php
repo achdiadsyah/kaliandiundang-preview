@@ -29,7 +29,6 @@
     <link href="<?= base_url(); ?>assets/themes/kd-001/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link href="<?= base_url(); ?>assets/css/font-awesome.min.css" rel="stylesheet" />
-	<link href="<?= base_url(); ?>assets/css/contact-php.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
 
 
@@ -271,7 +270,6 @@
 		</section>
 		<?php endif; ?>
 
-
 		<?php if($response['user_feature']['show_rsvp'] == '1') : ?>
 		<section id="rsvp" data-aos="fade-up">
 			<div class="d-flex flex-column align-items-center justify-content-center py-5">
@@ -322,10 +320,13 @@
 	
 		<div class="py-3"></div>
 	
+	</div>
+
+	<div class="d-none" id="footer_section">
 		<?php $this->view('1navMobile'); ?>
-	
+		
 		<?php if(!empty($response['music'])) :?>
-		<audio src="<?= base_url(); ?>assets/music/1.mp3" id="my_audio" loop="loop"></audio>
+		<audio src="<?= $aws_url; ?><?= $response['music']; ?>" id="my_audio" loop="loop"></audio>
 		<a class="player-btn d-flex align-items-center justify-content-center active" style="background-image: url('<?= base_url(); ?>assets/img/disk.svg');" onclick="musicPlayer();">
 			<i id="icon_player" class="bi bi-play-fill"></i>
 		</a>
@@ -337,7 +338,6 @@
 
 <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
 <script src="<?= base_url(); ?>assets/js/bootstrap.min.js"></script>
-<script src="<?= base_url(); ?>assets/js/php-email-form-validate.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 
@@ -391,6 +391,7 @@
 
     function openInvitation() {
         $('#main_page').removeClass();
+        $('#footer_section').removeClass();
 		$("#intro_page").remove();
 		<?php if(!empty($response['music'])) :?>
 		music.play();
