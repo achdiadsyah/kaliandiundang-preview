@@ -323,11 +323,11 @@
 	<div class="footer-wrapper d-none" data-aos="fade-up" id="footer_thanks">
 		<div class="footer-background" style="background-image: url('<?= $aws_url; ?><?= $response['user_config']['footer_photo']; ?>');"></div>
 		<div class="footer-content d-flex flex-column justify-content-center align-items-center">
-			<div class="kd-primary-text-light" data-aos="fade-left">
+			<div class="kd-primary-text-dark" data-aos="fade-left">
 				Thank You
 			</div>
-			<p class="text-white text-center"><?= $response['user_config']['closing_text']; ?></p>
-			<h2 class="kd-secondary-text-light py-4">
+			<p class="text-dark text-center"><?= $response['user_config']['closing_text']; ?></p>
+			<h2 class="kd-secondary-text-dark py-4">
 				~ <?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?> ~
 			</h2>
 			<a href="https://kaliandiundang.com" target="_blank"><img src="<?= base_url(); ?>assets/img/logo-dark.svg" width="180px"></a>
