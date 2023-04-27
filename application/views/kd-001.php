@@ -39,15 +39,15 @@
 
 	<div class="box d-block text-center" id="intro_page" data-aos="zoom-in" style="background-image: url('<?= $aws_url; ?><?= $response['user_config']['cover_photo']; ?>');">
 		<div class="py-5"></div>
-		<h1 class="kd-primary-text-light"><?= $response['user_config']['cover_title']; ?></h1>
-		<h2 class="kd-secondary-text-light py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h2>
+		<h1 class="kd-primary-text-dark"><?= $response['user_config']['cover_title']; ?></h1>
+		<h2 class="kd-secondary-text-dark py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h2>
 		<div class="py-5"></div>
 		<?php if($response['user_feature']['show_date_on_cover'] == '1') : ?>
-		<h1 class="kd-secondary-text-light"><?= longdate_indo($response['primary_party_date']); ?></h1>
+		<h1 class="kd-secondary-text-dark"><?= longdate_indo($response['primary_party_date']); ?></h1>
 		<div class="py-5"></div>
 		<?php endif; ?>
-		<h3 class="kd-primary-text-light">Kepada Yth : </h3>
-		<h4 class="kd-secondary-text-light"><?= $to; ?></h4>
+		<h3 class="kd-primary-text-dark">Kepada Yth : </h3>
+		<h4 class="kd-secondary-text-dark"><?= $to; ?></h4>
 		<div class="py-3"></div>
 		<button class="btn btn-sm bg-kd p-2" onclick="openInvitation();"><i class="bi bi-envelope"></i> Lihat Undangan</button>
 	</div>
@@ -55,11 +55,11 @@
 	<div class="d-none" id="main_page" data-aos="zoom-in">
 		<section id="header" style="background-image: url('<?= $aws_url; ?><?= $response['user_config']['cover_photo']; ?>');">
 			<div class="jumbotron d-flex flex-column align-items-center justify-content-center">
-				<h1 class="kd-primary-text-light pt-3"><?= $response['user_config']['cover_title']; ?></h1>
-				<h2 class="kd-secondary-text-light py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h2>
+				<h1 class="kd-primary-text-dark pt-3"><?= $response['user_config']['cover_title']; ?></h1>
+				<h2 class="kd-secondary-text-dark py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h2>
 				<?php if($response['user_feature']['show_countdown'] == '1'): ?>
 				<div class="text-white text-center pt-5">
-					<h1 class="kd-secondary-text-light"><?= $response['user_config']['countdown_title']; ?></h1>
+					<h1 class="kd-secondary-text-dark"><?= $response['user_config']['countdown_title']; ?></h1>
 					<div id="timer"></div>
 				</div>
 				<?php endif; ?>
