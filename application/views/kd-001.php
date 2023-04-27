@@ -10,8 +10,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#f5f6fa" />
     <meta property="og:title" content="<?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?>">
-    <meta property="og:description" content="Hello Tamu Undangan! Kamu Di Undang..
-	">
+    <meta property="og:description" content="Hello Tamu Undangan! Kamu Di Undang..">
     <meta property="og:url" content="https://kaliandiundang.com/">
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="300">
@@ -41,7 +40,7 @@
 	<div class="box d-block text-center" id="intro_page" data-aos="zoom-in" style="background-image: url('<?= $aws_url; ?><?= $response['user_config']['cover_photo']; ?>');">
 		<div class="py-5"></div>
 		<h1 class="kd-primary-text-light"><?= $response['user_config']['cover_title']; ?></h1>
-		<h2 class="kd-secondary-text-light py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h4>
+		<h2 class="kd-secondary-text-light py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h2>
 		<div class="py-5"></div>
 		<?php if($response['user_feature']['show_date_on_cover'] == '1') : ?>
 		<h1 class="kd-secondary-text-light"><?= longdate_indo($response['primary_party_date']); ?></h1>
@@ -49,18 +48,18 @@
 		<?php endif; ?>
 		<h3 class="kd-primary-text-light">Kepada Yth : </h3>
 		<h4 class="kd-secondary-text-light"><?= $to; ?></h4>
-		<div class="py-5"></div>
+		<div class="py-3"></div>
 		<button class="btn btn-sm bg-kd p-2" onclick="openInvitation();"><i class="bi bi-envelope"></i> Lihat Undangan</button>
 	</div>
 
 	<div class="d-none" id="main_page" data-aos="zoom-in">
 		<section id="header" style="background-image: url('<?= $aws_url; ?><?= $response['user_config']['cover_photo']; ?>');">
 			<div class="jumbotron d-flex flex-column align-items-center justify-content-center">
-				<h1 class="kd-primary-text-light"><?= $response['user_config']['cover_title']; ?></h1>
-				<h2 class="kd-secondary-text-light py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h4>
+				<h1 class="kd-primary-text-light pt-3"><?= $response['user_config']['cover_title']; ?></h1>
+				<h2 class="kd-secondary-text-light py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h2>
 				<?php if($response['user_feature']['show_countdown'] == '1'): ?>
 				<div class="text-white text-center pt-5">
-					<h1 class="kd-secondary-text-light"><?= $response['user_config']['countdown_title']; ?></h3>
+					<h1 class="kd-secondary-text-light"><?= $response['user_config']['countdown_title']; ?></h1>
 					<div id="timer"></div>
 				</div>
 				<?php endif; ?>
@@ -274,12 +273,12 @@
 		<section id="rsvp" data-aos="fade-up">
 			<div class="d-flex flex-column align-items-center justify-content-center py-5">
 				<div class="text-center pb-3">
-					<h1 class="kd-primary-text-dark">RSVP</h1>
+					<h1 class="kd-primary-text-dark">Rsvp</h1>
 					<img src="<?= base_url(); ?>assets/themes/kd-001/img/daun.png" width="100px" />
 				</div>
 				<div class="container row">
 					<div class="col-12 col-md-6 mx-auto">
-						<form action="" method="post" id="form_rsvp" data-aos="fade-up">
+						<form action="<?= base_url('home/saveRsvp'); ?>" method="post" id="form_rsvp" data-aos="fade-up">
 							<input type="hidden" name="rsvp_code" id="rsvp_code" value="<?= uniqid(); ?>" required>
 							<div class="form-group py-2">
 								<input type="text" class="form-control" name="rsvp_name" id="rsvp_name" placeholder="Nama Anda" required>
@@ -288,7 +287,7 @@
 								<input type="number" class="form-control" name="rsvp_phone" id="rsvp_phone" placeholder="Nomor WA" required>
 							</div>
 							<div class="form-group py-2">
-								<input type="number" class="form-control" name="rsvp_max" id="rsvp_max" placeholder="Jumlah Tamu" required>
+								<input type="number" class="form-control" name="rsvp_max" id="rsvp_max" placeholder="Jumlah Tamu" value="1" min="1" max="5" required>
 							</div>
 							<div class="form-group py-2">
 								<select class="form-control" name="rsvp_status" id="rsvp_status" required>
@@ -317,9 +316,22 @@
 			</div>
 		</section>
 		<?php endif; ?>
-	
-		<div class="py-3"></div>
-	
+
+		
+	</div>
+
+	<div class="footer-wrapper d-none" data-aos="fade-up" id="footer_thanks">
+		<div class="footer-background" style="background-image: url('<?= $aws_url; ?><?= $response['user_config']['footer_photo']; ?>');"></div>
+		<div class="footer-content d-flex flex-column justify-content-center align-items-center">
+			<div class="kd-primary-text-light" data-aos="fade-left">
+				Thank You
+			</div>
+			<p class="text-white text-center"><?= $response['user_config']['closing_text']; ?></p>
+			<h2 class="kd-secondary-text-light py-4">
+				~ <?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?> ~
+			</h2>
+			<a href="https://kaliandiundang.com" target="_blank"><img src="<?= base_url(); ?>assets/img/logo-dark.svg" width="180px"></a>
+		</div>
 	</div>
 
 	<div class="d-none" id="footer_section">
@@ -343,14 +355,14 @@
 
 <script>
     AOS.init();
-    const music = document.getElementById("my_audio");
-    const icon = $("#icon_player");
 
 	lightbox.option({
     	disableScrolling:true
     });
 	
 	<?php if(!empty($response['music'])) :?>
+	const music = document.getElementById("my_audio");
+    const icon = $("#icon_player");
 	function musicPlayer() {
 		if (music.duration > 0 && !music.paused) {
 			music.pause();
@@ -390,9 +402,10 @@
 	setInterval('updateTimer()', 1000);
 
     function openInvitation() {
+		$("#intro_page").remove();
         $('#main_page').removeClass();
         $('#footer_section').removeClass();
-		$("#intro_page").remove();
+        $('#footer_thanks').removeClass('d-none');
 		<?php if(!empty($response['music'])) :?>
 		music.play();
 		<?php endif; ?>
