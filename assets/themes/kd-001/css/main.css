@@ -2,9 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Trirong);
 
 :root {
-  --primary: #A47D53;
-  --secodary: #C7ADBD;
-  --hover: #A47D53;
+  --primary: #f39c12;
+  --secodary: #fad190;
+  --three: #8A623F;
+  --hover: #f39c12;
   --dark: #000000;
   --light: #ffffff
 }
@@ -49,6 +50,10 @@
 
 .bg-kd {
   background-color: var(--primary);
+}
+
+.bg-kd-three {
+  background-color: var(--three);
 }
 
 .fc-kd {
@@ -219,7 +224,7 @@ svg #wheel {
 .navmobile {
 	width: 100%;
   max-width: 480px;
-	background: var(--primary);
+	background: var(--three);
   opacity: 85%;
 	z-index: 999;
 	left: 50%;
