@@ -76,7 +76,7 @@
 				<div class="text-center pb-3">
 					<h3 class="kd-primary-arabic-dark">بسم الله الرحمن الرحيم</h3>
 				</div>
-				<div class="text-center pt-3">
+				<div class="text-center pt-3 px-3">
 					<p class="font-data">
 						“Dan diantara tanda-tanda kekuasaan-Nya ialah diciptakan Nya untukmu pasangan hidup dari jenismu <br />
 						sendiri supaya kamu mendapat ketenangan hati dan dijadikan-Nya kasih sayang diantara kamu.<br />
@@ -326,11 +326,11 @@
 			<div class="kd-primary-text-dark" data-aos="fade-left">
 				Thank You
 			</div>
-			<p class="text-dark text-center"><?= $response['user_config']['closing_text']; ?></p>
-			<h2 class="kd-secondary-text-dark py-4">
+			<p class="text-dark text-center px-3"><?= $response['user_config']['closing_text']; ?></p>
+			<h2 class="kd-secondary-text-color py-4">
 				~ <?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?> ~
 			</h2>
-			<a href="https://kaliandiundang.com" target="_blank"><img src="<?= base_url(); ?>assets/img/logo-dark.svg" width="180px"></a>
+			<a href="https://kaliandiundang.com" target="_blank"><img src="<?= base_url(); ?>assets/img/logo-dark.svg" width="100px"></a>
 		</div>
 	</div>
 
