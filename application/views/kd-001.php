@@ -88,7 +88,7 @@
 				<div class="container row pt-5 gy-5">
 					<div class="col-12 col-md-6">
 						<div class="text-center">
-							<img src="<?= $aws_url; ?><?= $response['couple_config']['men_photo']; ?>" width="200px" height="200px" loading="lazy">
+							<img src="<?= $aws_url; ?><?= $response['couple_config']['men_photo']; ?>" width="160px" height="160px" loading="lazy">
 						</div>
 						<div class="text-center">
 							<h4 class="kd-secondary-text-color"><?= $response['couple_config']['men_full_name']; ?></h4>
@@ -101,7 +101,7 @@
 					</div>
 					<div class="col-12 col-md-6">
 						<div class="text-center">
-							<img src="<?= $aws_url; ?><?= $response['couple_config']['women_photo']; ?>" width="200px" height="200px" loading="lazy">
+							<img src="<?= $aws_url; ?><?= $response['couple_config']['women_photo']; ?>" width="160px" height="160px" loading="lazy">
 						</div>
 						<div class="text-center">
 							<h4 class="kd-secondary-text-color"><?= $response['couple_config']['women_full_name']; ?></h4>
