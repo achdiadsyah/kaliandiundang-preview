@@ -30,7 +30,7 @@
   display: inline-block;
   max-width: 480px;
   padding: 8px;
-  background: var(--primary);
+  background: var(--three);
   opacity: 90%;
   border-radius: 5px;
   margin: 8px;
@@ -49,7 +49,7 @@
 }
 
 .bg-kd {
-  background-color: var(--primary);
+  background-color: var(--three);
 }
 
 .bg-kd-three {
@@ -57,7 +57,7 @@
 }
 
 .fc-kd {
-  color: var(--primary);
+  color: var(--three);
 }
 
 .fc-kd-three {
@@ -136,7 +136,7 @@
 .kd-primary-text-color {
   font-family: "Trirong", serif;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--three);
 }
 
 .kd-secondary-text-dark {
@@ -156,7 +156,7 @@
 .kd-secondary-text-color {
   font-family: "Trirong", serif;
   font-weight: 200;
-  color: var(--primary);
+  color: var(--three);
 }
 
 .kd-three-text-color {
