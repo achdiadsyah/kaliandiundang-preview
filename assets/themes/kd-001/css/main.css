@@ -3,7 +3,7 @@
 
 :root {
   --primary: #f39c12;
-  --secodary: #fad8a2;
+  --secodary: #fffde0;
   --three: #8A623F;
   --hover: #f39c12;
   --dark: #000000;
@@ -58,6 +58,10 @@
 
 .fc-kd {
   color: var(--primary);
+}
+
+.fc-kd-three {
+  color: var(--three);
 }
 
 .jumbotron{
@@ -153,6 +157,12 @@
   font-family: "Trirong", serif;
   font-weight: 200;
   color: var(--primary);
+}
+
+.kd-three-text-color {
+  font-family: "Trirong", serif;
+  font-weight: 200;
+  color: var(--three);
 }
 
 .kd-primary-arabic-dark {

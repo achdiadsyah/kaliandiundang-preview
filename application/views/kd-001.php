@@ -49,7 +49,7 @@
 		<h3 class="kd-primary-text-dark">Kepada Yth : </h3>
 		<h4 class="kd-secondary-text-dark"><?= $to; ?></h4>
 		<div class="py-3"></div>
-		<button class="btn btn-sm bg-kd-three p-2" onclick="openInvitation();"><i class="bi bi-envelope"></i> Lihat Undangan</button>
+		<button class="btn btn-sm bg-kd-three text-white p-2" onclick="openInvitation();"><i class="bi bi-envelope"></i> Lihat Undangan</button>
 	</div>
 
 	<div class="d-none" id="main_page" data-aos="zoom-in">
@@ -91,12 +91,12 @@
 							<img src="<?= $aws_url; ?><?= $response['couple_config']['men_photo']; ?>" width="160px" height="160px" loading="lazy">
 						</div>
 						<div class="text-center">
-							<h4 class="kd-secondary-text-color"><?= $response['couple_config']['men_full_name']; ?></h4>
+							<h4 class="kd-three-text-color"><?= $response['couple_config']['men_full_name']; ?></h4>
 							<p class="">
 								Putra <?= $response['couple_config']['men_family_call']; ?> <?= $response['user_config']['separator_title']; ?> <br />
 								<?= $response['user_config']['father_title']; ?> <?= $response['couple_config']['men_father_name']; ?> dan <?= $response['user_config']['mother_title']; ?> <?= $response['couple_config']['men_mother_name']; ?>
 							</p>
-							<a href="https://instagram.com/<?= $response['couple_config']['men_instagram']; ?>" target="_blank" class="btn btn-sm bg-kd-three p-2"><i class="bi bi-instagram"></i> Instagram</a>
+							<a href="https://instagram.com/<?= $response['couple_config']['men_instagram']; ?>" target="_blank" class="btn btn-sm bg-kd-three text-white p-2"><i class="bi bi-instagram"></i> Instagram</a>
 						</div>
 					</div>
 					<div class="col-12 col-md-6">
@@ -104,12 +104,12 @@
 							<img src="<?= $aws_url; ?><?= $response['couple_config']['women_photo']; ?>" width="160px" height="160px" loading="lazy">
 						</div>
 						<div class="text-center">
-							<h4 class="kd-secondary-text-color"><?= $response['couple_config']['women_full_name']; ?></h4>
+							<h4 class="kd-three-text-color"><?= $response['couple_config']['women_full_name']; ?></h4>
 							<p class="">
 								Putri <?= $response['couple_config']['women_family_call']; ?> <?= $response['user_config']['separator_title']; ?> <br />
 								<?= $response['user_config']['father_title']; ?> <?= $response['couple_config']['women_father_name']; ?> dan <?= $response['user_config']['mother_title']; ?> <?= $response['couple_config']['women_mother_name']; ?>
 							</p>
-							<a href="https://instagram.com/<?= $response['couple_config']['women_instagram']; ?>" target="_blank" class="btn btn-sm bg-kd-three p-2"><i class="bi bi-instagram"></i> Instagram</a>
+							<a href="https://instagram.com/<?= $response['couple_config']['women_instagram']; ?>" target="_blank" class="btn btn-sm bg-kd-three text-white p-2"><i class="bi bi-instagram"></i> Instagram</a>
 						</div>
 					</div>
 				</div>
@@ -146,11 +146,11 @@
 								</div>
 								<div class="d-flex flex-row justify-content-between">
 									<?php if($key['party_address_gmaps'] !== NULL): ?>
-									<a href="https://www.google.com/maps/place/<?= $key['party_address_gmaps']; ?>" target="_blank" class="btn btn-sm bg-kd p-2">Google Maps</a>
+									<a href="https://www.google.com/maps/place/<?= $key['party_address_gmaps']; ?>" target="_blank" class="btn btn-sm bg-kd-three text-white p-2">Google Maps</a>
 									<?php endif; ?>
 	
 									<?php if($key['streaming_url'] !== NULL): ?>
-									<a href="<?= $key['streaming_url']; ?>" target="_blank" class="btn btn-sm bg-danger text-white p-2">Live Streaming</a>
+									<a href="<?= $key['streaming_url']; ?>" target="_blank" class="btn btn-sm bg-kd-three text-white p-2">Live Streaming</a>
 									<?php endif; ?>
 								</div>
 							</div>
