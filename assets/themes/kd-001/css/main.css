@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@import url(https://fonts.googleapis.com/css?family=Trirong);
 
 :root {
   --primary: #FDA7DF;
@@ -124,27 +125,27 @@
 }
 
 .kd-primary-text-color {
-  font-family: 'Delicious Handrawn';
+  font-family: "Trirong", serif;
   font-weight: 600;
   color: var(--primary);
 }
 
 .kd-secondary-text-dark {
-  font-family: 'Delicious Handrawn';
+  font-family: "Trirong", serif;
   font-size: 22pt;
   font-weight: 200;
   color: var(--dark);
 }
 
 .kd-secondary-text-light {
-  font-family: 'Delicious Handrawn';
+  font-family: "Trirong", serif;
   font-size: 30pt;
   font-weight: 200;
   color: var(--light);
 }
 
 .kd-secondary-text-color {
-  font-family: 'Delicious Handrawn';
+  font-family: "Trirong", serif;
   font-weight: 200;
   color: var(--primary);
 }
