@@ -41,10 +41,16 @@
 		<div class="py-5"></div>
 		<h1 class="kd-primary-text-dark"><?= $response['user_config']['cover_title']; ?></h1>
 		<h2 class="kd-secondary-text-dark py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h2>
-		<div class="py-5"></div>
+		<div class="py-2">
+		<div class="flex justify-center">
+			<div class="p-2 relative">
+				<img class="m-auto w-44 h-44 rounded-full border-4 border-color-decor" src="<?= $aws_url; ?><?= $response['user_config']['footer_photo']; ?>">
+			</div>
+		</div>
+		</div>
 		<?php if($response['user_feature']['show_date_on_cover'] == '1') : ?>
 		<h1 class="kd-secondary-text-dark"><?= longdate_indo($response['primary_party_date']); ?></h1>
-		<div class="py-5"></div>
+		<div class="py-3"></div>
 		<?php endif; ?>
 		<h3 class="kd-primary-text-dark">Kepada Yth : </h3>
 		<h4 class="kd-secondary-text-dark"><?= $to; ?></h4>
@@ -334,7 +340,7 @@
 		</div>
 	</div>
 
-	<div class="d-none" id="footer_section">
+	<div class="d-none" id="footer_section">	
 		<?php $this->view('1navMobile'); ?>
 		
 		<?php if(!empty($response['music'])) :?>
