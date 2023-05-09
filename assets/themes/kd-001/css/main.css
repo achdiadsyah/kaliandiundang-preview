@@ -142,14 +142,14 @@
 
 .kd-secondary-text-dark {
   font-family: "Trirong", serif;
-  font-size: 16pt;
+  font-size: 13pt;
   font-weight: 200;
   color: var(--dark);
 }
 
 .kd-secondary-text-light {
   font-family: "Trirong", serif;
-  font-size: 30pt;
+  font-size: 13pt;
   font-weight: 200;
   color: var(--light);
 }
