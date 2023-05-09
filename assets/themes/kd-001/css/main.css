@@ -122,14 +122,14 @@
 
 .kd-primary-text-dark {
   font-family: 'Kaushan Script';
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--dark);
 }
 
 .kd-primary-text-light {
   font-family: 'Kaushan Script';
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--light);
 }
@@ -142,7 +142,7 @@
 
 .kd-secondary-text-dark {
   font-family: "Trirong", serif;
-  font-size: 22pt;
+  font-size: 16pt;
   font-weight: 200;
   color: var(--dark);
 }
