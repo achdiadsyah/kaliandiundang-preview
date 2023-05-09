@@ -44,7 +44,7 @@
 		<div class="py-2">
 		<div class="flex justify-center">
 			<div class="p-2 relative">
-				<img class="rounded-circle" width="200px" height="200px" src="<?= $aws_url; ?><?= $response['user_config']['footer_photo']; ?>">
+				<img class="rounded-circle" width="200px" height="200px" style="object-fit: cover;" src="<?= $aws_url; ?><?= $response['user_config']['footer_photo']; ?>">
 			</div>
 		</div>
 		</div>
