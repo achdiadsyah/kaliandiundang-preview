@@ -49,7 +49,7 @@
 		</div>
 		</div>
 		<?php if($response['user_feature']['show_date_on_cover'] == '1') : ?>
-		<h1 class="kd-secondary-text-dark"><?= longdate_indo($response['primary_party_date']); ?></h1>
+		<h1 class="kd-secondary-text-dark">Sabtu, 13 Mei 2023</h1>
 		<div class="py-3"></div>
 		<?php endif; ?>
 		<h3 class="kd-primary-text-dark">Kepada Yth : </h3>
@@ -74,6 +74,7 @@
 					<div id="timer"></div>
 				</div>
 				<?php endif; ?>
+				<h1 class="kd-secondary-text-dark">Sabtu, 13 Mei 2023</h1>
 				<div style="padding-top: 1rem;"></div>
 				<svg width="40" height="40" viewBox="0 0 247 390" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
 					<path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
