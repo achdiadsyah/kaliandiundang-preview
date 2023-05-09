@@ -61,14 +61,12 @@
 	<div class="d-none" id="main_page" data-aos="zoom-in">
 		<section id="header" style="background-image: url('<?= $aws_url; ?><?= $response['user_config']['cover_photo']; ?>');">
 			<div class="jumbotron d-flex flex-column align-items-center justify-content-center">
-				<h1 class="kd-primary-text-dark pt-3"><?= $response['user_config']['cover_title']; ?></h1>
+				<h1 class="kd-primary-text-dark pt-5"><?= $response['user_config']['cover_title']; ?></h1>
 				<h2 class="kd-secondary-text-dark py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h2>
-				<div class="py-1">
 				<div class="flex justify-center">
 					<div class="p-2 relative">
 						<img class="rounded-circle" width="200px" height="200px" style="object-fit: cover;" src="<?= $aws_url; ?><?= $response['user_config']['footer_photo']; ?>">
 					</div>
-				</div>
 				</div>
 				<?php if($response['user_feature']['show_countdown'] == '1'): ?>
 				<div class="text-white text-center pt-5">
