@@ -65,7 +65,7 @@
 				<h2 class="kd-secondary-text-dark py-3"><?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?></h2>
 				<div class="flex justify-center">
 					<div class="p-2 relative">
-						<img class="rounded-circle" width="200px" height="200px" style="object-fit: cover;" src="<?= $aws_url; ?><?= $response['user_config']['footer_photo']; ?>">
+						<img class="rounded-circle" width="150px" height="150px" style="object-fit: cover;" src="<?= $aws_url; ?><?= $response['user_config']['footer_photo']; ?>">
 					</div>
 				</div>
 				<?php if($response['user_feature']['show_countdown'] == '1'): ?>
