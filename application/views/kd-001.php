@@ -338,7 +338,7 @@
 				Thank You
 			</div>
 			<p class="text-dark text-center px-3"><?= $response['user_config']['closing_text']; ?></p>
-			<h2 class="kd-secondary-text-color py-4">
+			<h2 class="kd-secondary-text-dark py-4">
 				~ <?= $response['couple_config']['men_nickname']; ?> & <?= $response['couple_config']['women_nickname']; ?> ~
 			</h2>
 			<a href="https://kaliandiundang.com" target="_blank"><img src="<?= base_url(); ?>assets/img/logo-dark.svg" width="100px"></a>
